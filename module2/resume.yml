@@ -1,85 +1,43 @@
 contact:
-  name: John Doe
-  email: john@doe.com
-  date_of_birth: 01/01/1990
-  job: Python Developer
-  summary: |
-        Hi, my name is John and I'm a Python dev since 2012.
-        Please hire me!
+  date_of_birth: 29/07/2003
+  email: mikhail.d.savin@gmail.com
+  job: PHP Programmer
   location:
-    address: 10 Downing Street
-    city: London
-    country: UK
-    zip: SW1A 2AA
-  phone: '+44612345678'
-experiences:
-- company: Foo company
-  position: Senior Python Developer
-  start_date: January 2018
-  summary: |
-        Developer for the main Foo webapp.
-        I also worked on migration from python 2.7 to 3.6.
-        I've been scrum master for a team of 8 people.
-        I added automated unit tests to the codebase.
-  website: https://foo.com
-  tags:
-  - flask
-  - mongodb
-  - redis
-  - pytest
-  - scrum
-- company: Bar company
-  position: Python developer
-  start_date: January 2014
-  end_date: December 2017
-  summary: |
-        I developped Bar backoffice main features and
-        worked on CI/CD
-  website: https://bar.net
-  tags:
-  - django
-  - mysql
-  - jenkins
-- company: Bar company
-  position: Junior python developer
-  start_date: January 2012
-  end_date: December 2013
-  website: https://bar.net
-  summary: |
-        I made multiple KPI dashboards and
-        provided automation scripts
-profiles:
-- network: Facebook
-  url: https://facebook.com/johndoe
-- network: Twitter
-  url: https://twitter.com/nottherealjohndoe
-- network: Personal website
-  url: https://john.doe.fake
+    address: N/A
+    city: Томск
+    country: Russia
+    zip: N/A
+  name: Савин Михаил Денисович
+  phone: '+791308779317'
+  summary: PHP Programmer with 7 months of experience at Chargelink.
 education:
-- degree: Bachelor of Software Engineering
-  start_date: January 2008
-  end_date: January 2012
-  institution: University of California, Berkeley
-  website: https://www.berkeley.edu
-skills:
-- name: Python
-  level: 90
-- name: Flask
-  level: 80
-- name: Scrum
-  level: 80
-- name: Java
-  level: 50
+- degree: Incomplete Higher Education
+  end_date: '2024'
+  institution: Томский государственный университет систем управления и радиоэлектроники
+  start_date: N/A
+  website: N/A
+experiences:
+- company: Chargelink
+  end_date: Present
+  position: Backend Developer
+  start_date: May 2023
+  summary: Developed the entire backend (and a simple front) for the project.
+  tags:
+  - PHP
+  - Git
+  website: N/A
+hobbies: []
 languages:
-- name: English
-  level: Native language
-- name: French
-  level: Proficient
-projects:
-- name: foo.bar
-  description: Just an useless app
-  url: https://github.com/johndoe/foo.bar
-hobbies:
-- name: History
-- name: Sport
-  details: Running and weightlifting
+- level: Native
+  name: Russian
+- level: B2 - Upper-intermediate
+  name: English
+- level: A2 - Elementary
+  name: French
+profiles: []
+projects: []
+skills:
+- level: N/A
+  name: PHP
+- level: N/A
+  name: Git
