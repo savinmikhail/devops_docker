@@ -3,30 +3,30 @@ contact:
   email: mikhail.d.savin@gmail.com
   job: PHP Programmer
   location:
-    address: N/A
-    city: Томск
+    address: 19 Gvardeiskoy Divisii str., 9a
+    city: Tomsk
     country: Russia
-    zip: N/A
-  name: Савин Михаил Денисович
+    zip: 644043
+  name: Savin Mikhail Denisovich
   phone: '+791308779317'
-  summary: PHP Programmer with 7 months of experience at Chargelink.
+  summary: PHP Programmer with 5 months of experience at RedRamka.
 education:
 - degree: Incomplete Higher Education
   end_date: '2024'
-  institution: Томский государственный университет систем управления и радиоэлектроники
-  start_date: N/A
-  website: N/A
+  institution: Tomsk State University Of Control Systems and Radioelectronics 
+  start_date: '2020'
+  website: 'https://tusur.ru/'
 experiences:
-- company: Chargelink
+- company: Redramka
   end_date: Present
   position: Backend Developer
-  start_date: May 2023
-  summary: Developed the entire backend (and a simple front) for the project.
+  start_date: 24th June 2023
+  summary: Write projects on Laravel, Yii2, Yii1, BitrixCRM and native PHP.
   tags:
   - PHP
   - Git
-  website: N/A
-hobbies: []
+  website: 'https://redramka.ru/'
+hobbies: ['Powerlifting']
 languages:
 - level: Native
   name: Russian
@@ -41,3 +41,15 @@ skills:
   name: PHP
 - level: N/A
   name: Git
+- level: N/A
+  name: Laravel
+- level: N/A
+  name: Yii2
+- level: N/A
+  name: Yii1
+- level: N/A
+  name: Bitrix
+- level: N/A
+  name: Native
+- level: N/A
+  name: Docker
