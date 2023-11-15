@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>{{ resume.contact.name }}'s resume</title>
+        <style type="text/css">{% include "classic.css" %}</style>
+	</head>
+	<body>
+        <div class="page-wrap">
+            {% if image %}<img src="file:///{{ image }}" alt="Photo" class="pic" />{% endif %}
+			<div class="title">
+				<div {% if not image %}class="centered"{% endif %}>
+					<h1>{{ resume.contact.name }}</h1>
+					<h2>{{ resume.contact.job }}</h2>
+				</div>
+                <p {% if not image %}style="padding-left: 200px;"{% endif %}>
+				<strong>Born:</strong> 	{{ resume.contact.date_of_birth }}<br/>
+				<strong>Address:</strong> {{ resume.contact.location.address }}, {% if resume.contact.location.zip %}{{ resume.contact.location.zip }} {% endif %}{{ resume.contact.location.city }} {% if resume.contact.location.country %}{{ resume.contact.location.country }}{% endif %}<br/>
+                <strong>Phone:</strong> 	{{ resume.contact.phone }}<br />
+                <strong>Email:</strong> 	<a href="mailto:{{ resume.contact.email }}">{{ resume.contact.email }}</a><br/><br/>
+				{% for p in resume.profiles %}
+                <strong>{{ p.network }}:</strong> 	<a href="{{ p.url }}">{{ p.url }}</a><br />
+				{% endfor %}
+				</p>
+        </div>
+        <div class="clear"></div>
+		<dl>
+			<dd class="clear"></dd>
+			<dt>Experience</dt>
+			{% for e in resume.experiences %}
+			<dd class="item">
+				<h2>{{ e.company }} - {{ e.position }}<span class="subtitle">{{ e.start_date }} - {% if not e.end_date %}Today{% else %}{{ e.end_date }}{% endif %}</span></h2>
+				<ul>{% for line in e.summary.split('\n')[:-1] %}<li>{{ line }}</li>{% endfor %}</ul>
+				{% if e.tags %}<div class="tags">-{% for tag in e.tags %} {{ tag }} -{% endfor %}</div>{% endif %}
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+			<dt>Education</dt>
+			{% for d in resume.education %}
+			<dd class="item">
+				<h2>{{ d.institution }}<span class="subtitle">{{ d.start_date }} - {% if not d.end_date %}Today{% else %}{{ d.end_date }}{% endif %}</span></h2>
+				<p>{{ d.degree }}</p>
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+			<dt>Skills</dt>
+			{% for s in resume.skills %}
+			<dd class="item">
+				<h2>{{ s.name }}
+                {% if s.level %}
+				<span class="subtitle">{% for i in range(10) %}{% if i < s.level|int//10 %}&#x2605;{% else %}&#x2606;{% endif %}{% endfor %}</span>
+                {% endif %}
+                </h2>
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+			<dt>Languages</dt>
+			{% for l in resume.languages %}
+			<dd class="item">
+				<h2>{{ l.name }}<span class="subtitle">{{ l.level }}</span></h2>
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+			{% if resume.projects %}
+			<dt>Projects</dt>
+			{% for p in resume.projects %}
+			<dd class="item">
+				<h2>{{ p.name }}: <span class="subtitle"><a href="{{ p.url }}">{{ p.url }}</a></span></h2>
+				<p>{{ p.description }}</p>
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+			{% endif %}
+			<dt>Hobbies</dt>
+			{% for h in resume.hobbies %}
+			<dd class="item">
+				<h2>{{ h.name }}<span class="subtitle">{{ h.details }}</span></h2>
+			</dd>
+			{% endfor %}
+			<dd class="clear"></dd>
+        </dl>
+        <div class="clear"></div>
+        </div>
+	</body>
+</html>

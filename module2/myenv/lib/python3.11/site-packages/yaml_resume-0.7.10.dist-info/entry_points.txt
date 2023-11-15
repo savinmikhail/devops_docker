@@ -1,0 +1,3 @@
+[console_scripts]
+yaml-resume = yaml_resume.cli:cli
+
