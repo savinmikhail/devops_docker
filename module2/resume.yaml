@@ -1,0 +1,45 @@
+contact:
+  date_of_birth: 29/07/2003
+  email: mikhail.d.savin@gmail.com
+  job: PHP Programmer
+  location:
+    address: 19 Gvardeiskoy Divisii str., 9a
+    city: Tomsk
+    country: Russia
+    zip: '644043'
+  name: Savin Mikhail Denisovich
+  phone: '+791308779317'
+  summary: PHP Programmer with 5 months of experience at RedRamka.
+education:
+  - degree: Incomplete Higher Education
+    end_date: '2024'
+    institution: Tomsk State University Of Control Systems and Radioelectronics
+    start_date: '2020'
+    website: https://tusur.ru/
+experiences:
+  - company: Redramka
+    end_date: Present
+    position: Backend Developer
+    start_date: 24th June 2023
+    summary: Write projects on Laravel, Yii2, Yii1, BitrixCRM and native PHP.
+    tags:
+      - PHP
+      - Git
+    website: https://redramka.ru/
+hobbies:
+  - details: powerlifting
+    name: powerlifting
+languages:
+  - level: Native
+    name: Russian
+  - level: B2 - Upper-intermediate
+    name: English
+  - level: A2 - Elementary
+    name: French
+profiles: []
+projects: []
+skills:
+  - level: 50
+    name: PHP
+  - level: 50
+    name: Python
