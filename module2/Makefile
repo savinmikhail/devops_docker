@@ -1,14 +1,16 @@
 .PHONY: init start validate export add-tag
 
 init:
-	python3 -m venv myenv
-	source myenv/bin/activate && pip install -r requirements.txt
+	yaml-resume init resume.yaml
 
 validate:
 	yaml-resume validate resume.yaml
 
+# Define the default export format
+EXT ?= pdf
 export:
-	yaml-resume export resume.yaml -e pdf -o resume
+	yaml-resume export resume.yaml -e $(EXT) -o resume
+
 
 add-skill:
 	yq --yaml-output '.skills += [{"level": $(LEVEL), "name": "$(NAME)"}]' resume.yaml | sponge resume.yaml
