@@ -1,0 +1,14 @@
+version: 3
+
+tasks:
+  build:
+    cmds:
+      - docker-compose build
+
+  start:
+    cmds:
+      - docker-compose up -d
+
+  stop:
+    cmds:
+      - docker-compose down
