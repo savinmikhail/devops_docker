@@ -1,0 +1,30 @@
+stages:
+  - plan
+  - deploy
+
+plan:
+  stage: plan
+  tags: 
+    - terraform-practice
+  script:
+    - whoami
+    - terraform init
+    - terraform plan
+
+apply:
+  stage: deploy
+  tags:
+    - terraform-practice
+  when: manual
+  script:
+    - terraform init
+    - terraform apply -auto-approve
+
+destroy:
+  stage: deploy
+  tags:
+    - terraform-practice
+  when: manual
+  script:
+    - terraform init
+    - terraform destroy -auto-approve
