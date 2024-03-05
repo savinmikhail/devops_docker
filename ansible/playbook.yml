@@ -1,0 +1,35 @@
+---
+- name: Configure server and install nginx
+  hosts: all
+  become: yes
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Set hostname to current inventory hostname
+      hostname:
+        name: "{{ server_hostname }}"
+
+    - name: Install nginx
+      package:
+        name: nginx
+        state: "{{ nginx_package_state }}"
+
+    - name: Create index.html file
+      copy:
+        content: "Hello, world!"
+        dest: /usr/share/nginx/html/index.html
+
+    - name: Start and enable nginx service
+      community.docker.docker_container:
+      service:
+        name: nginx
+        state: "{{ nginx_service_state }}"
+        enabled: "{{ nginx_service_enabled }}"
+        image: "{{ nginx_image }}"
+        volumes:
+        - "{{ html_file }}:/usr/share/nginx/html/index.html"
+        - "{{ nginx_conf }}:/etc/nginx/conf.d/default.conf"
+        ports:
+        - 80:80

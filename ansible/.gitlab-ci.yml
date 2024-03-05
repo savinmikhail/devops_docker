@@ -1,0 +1,7 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - ansible-playbook -i inventory_file playbook.yml
